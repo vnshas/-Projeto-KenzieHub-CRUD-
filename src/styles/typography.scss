@@ -1,0 +1,35 @@
+.title1{
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    line-height: 1.4;
+}
+
+.title2{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-primary);
+    line-height: 1.4;
+}
+
+.title2.light{
+    font-weight: 500;
+}
+
+.title3{
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    line-height: 1.4;
+}
+
+.headline{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--font-primary);
+    line-height: 1.8;
+}
+
+.headline.bold{
+    font-weight: 600;
+}

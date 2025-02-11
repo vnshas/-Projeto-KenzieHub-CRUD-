@@ -1,0 +1,55 @@
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    
+
+    form{
+        display: flex;
+        flex-direction: column;
+        color: var(--grey0);
+        gap: 10px;
+        
+    }
+
+    label{
+        color: var(--grey0);
+        padding-block: 8px;
+    }
+
+    input{
+        width: 330px;
+        height: 48px;
+        border-radius: 4px;
+        background-color: var(--grey2);
+        padding: 1rem;
+        color:var(--grey0);
+        
+    }
+
+  
+
+    ::-webkit-input-placeholder {
+        color: var(--grey1);
+     }
+
+     input:-webkit-autofill {
+        -webkit-text-fill-color: var(--grey0) !important;
+        box-shadow:  0 0 0px 1000px var(--grey2) inset;
+
+    }
+     button{
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 4px;
+            background-color: var(--color-primary);
+            padding-inline: 15px;
+            height: 48px;
+            justify-content: center;
+            color: var(--grey0);
+            width: 324px;
+     }
+     button.sm{
+        width: 68px;
+     }
+}

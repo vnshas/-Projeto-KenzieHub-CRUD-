@@ -1,0 +1,48 @@
+.logoutView{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    h1{
+        margin-top: 10px;
+        color: (var(--grey0));
+    }
+    span{
+        color: var(--grey1);
+    }
+    .login{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--grey3);
+        padding: 42px 17px;
+        border-radius: 4px;
+        gap: 15px;
+    }
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 45px;
+    padding-bottom: 16px;
+}
+
+.button{
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: var(--grey1);
+    padding-inline: 15px;
+    height: 48px;
+    justify-content: center;
+    color: var(--grey0);
+    width: 324px;
+
+}
+
