@@ -53,8 +53,8 @@ export const RegisterPage = () => {
   });
 
   const { userRegister } = useContext(UserContext);
-  const submit = async (IUserRegister) => {
-    userRegister(IUserRegister);
+  const submit = async (formData : IUserRegister) => {
+    userRegister(formData);
   };
 
   return (
@@ -94,6 +94,7 @@ export const RegisterPage = () => {
               id="email"
               placeholder="Digite Aqui seu email"
               {...register("email")}
+              
             />
 
             <p>{errors.email?.message}</p>
@@ -152,9 +153,10 @@ export const RegisterPage = () => {
               id="course_module"
               {...register("course_module")}
             >
-              <option>Primeiro módulo</option>
-              <option>Segundo módulo</option>
-              <option>Terceiro módulo</option>
+              <option>Primeiro módulo (Introdução ao Frontend)</option>
+              <option>Segundo módulo (Frontend Avançado)</option>
+              <option>Terceiro módulo (Introdução ao Backend)</option>
+              <option>Quarto módulo (Backend Avançado)</option>
             </select>
             <p className="headline bold">{errors.course_module?.message}</p>
 

@@ -1,0 +1,88 @@
+header {
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    button{
+        display: inline-flex;
+        align-items: center;
+        border-radius: 4px;
+        background-color: var(--grey3);
+        padding-inline: 15px;
+        height: 48px;
+        justify-content: center;
+        color: var(--grey0);
+        width: 68px;
+    }
+}
+
+.userSection{
+    border: 1px solid var(--grey3);
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        
+    }
+
+    h1{
+        color: var(--grey0);
+    }
+    p{
+        color: var(--grey1);
+    }
+}
+
+.techSection{
+   .container{
+    padding: 20px;
+   }
+    h2 , h3{
+        color: var(--grey0);
+    }
+
+    .addButton{
+        display: inline-flex;
+        align-items: center;
+        border-radius: 4px;
+        background-color: var(--grey3);
+        padding-inline: 15px;
+        height: 48px;
+        justify-content: center;
+        color: var(--grey0);
+        width: 68px;
+    }
+
+    .excludeButton{
+        display: inline-flex;
+        align-items: center;
+        border-radius: 4px;
+        background-color: var(--grey3);
+        padding-inline: 15px;
+        height: 20px;
+        justify-content: center;
+        color: var(--grey0);
+        width: 68px;
+    }
+
+    .techsHeader{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    
+       
+        li{
+            padding: 22px;
+            background-color: var(--grey4);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+}

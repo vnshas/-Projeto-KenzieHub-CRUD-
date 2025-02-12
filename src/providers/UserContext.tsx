@@ -4,26 +4,28 @@ import { api } from "../services/api";
 import { IUserRegister } from "../pages/RegisterPage";
 import axios, { AxiosError } from "axios";
 import { toast } from "react-toastify";
+import { ILogin } from "../components/LoginForm";
  
-export const UserContext = createContext<IUserContext>({} as IUserContext);
+export const UserContext = createContext({} as IUserContext);
 
 interface IUserProviderProps {
-    children: ReactNode;
+    children: ReactNode
   }
 
   interface IUserContext {
     
     userRegister: (data: IUserRegister) => void;
-    
-   
-    
+    userLogin: (formData: ILogin) => Promise<void>
+    user: string
+    userLogout: () => void
     
   }
   
 
 export const UserProvider = ({children}: IUserProviderProps) => {
   
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState("");
+  const [techs, setTechs] = useState([])
 
   useEffect(() =>{
 
@@ -39,6 +41,7 @@ export const UserProvider = ({children}: IUserProviderProps) => {
             }
           })
           setUser(data)
+          setTechs(data.techs)
           navigate("/dashboard")
         } catch (error) {
           console.log(error)
@@ -53,24 +56,28 @@ export const UserProvider = ({children}: IUserProviderProps) => {
 
   const navigate = useNavigate();
 
- /* const userLogin = async (formData) =>{
+ const userLogin = async (formData : ILogin) =>{
     try {
       const { data } = await api.post("/sessions", formData);
       localStorage.setItem("@TOKEN", data.token);
       localStorage.setItem("@USERID", data.user.id)
       localStorage.setItem("@USER", JSON.stringify(data.user));
       setUser(data.user);
+      toast.success("Login efetuado com sucesso.");
       navigate("/dashboard");
     } catch (error) {
-      console.log(error)
-    }
-  }*/
-
+      if (axios.isAxiosError(error) && error.response) {
+        toast.error((error.response?.data as AxiosError).message);
+      } else {
+        console.log(error);
+      }
+ }
+ }
   const userRegister = async (data:IUserRegister) => {
     try {
       await api.post("/users", data);
+      toast.success("Registro efetuado com sucesso.");
       navigate("/");
-      alert("Cadastro efetuado com sucesso!");
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
         toast.error((error.response?.data as AxiosError).message);
@@ -78,20 +85,21 @@ export const UserProvider = ({children}: IUserProviderProps) => {
         console.log(error);
       }
     }
+  }
 
     const userLogout = () => {
       localStorage.removeItem("@TOKEN");
       localStorage.removeItem("@USERID");
-      setUser(null);
+      setUser("");
       navigate("/");
     };
 
     return (
       <UserContext.Provider
-        value={{ userRegister,}}
+        value={{ userRegister,userLogin,user, userLogout}}
       >
         {children}
       </UserContext.Provider>
     );
   }
-}
+
