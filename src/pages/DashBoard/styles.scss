@@ -16,6 +16,7 @@ header {
         justify-content: center;
         color: var(--grey0);
         width: 68px;
+        
     }
 }
 
@@ -39,8 +40,10 @@ header {
 
 .techSection{
    .container{
-    padding: 20px;
+    padding: 20px 10px;
+    
    }
+  
     h2 , h3{
         color: var(--grey0);
     }
@@ -51,10 +54,11 @@ header {
         border-radius: 4px;
         background-color: var(--grey3);
         padding-inline: 15px;
-        height: 48px;
+        height: 35px;
         justify-content: center;
         color: var(--grey0);
-        width: 68px;
+        width: 35px;
+        font-size: 1.2rem;
     }
 
     .excludeButton{
@@ -85,4 +89,18 @@ header {
             justify-content: space-between;
         }
     
+}
+@media(max-width:550px){
+    .userSection{
+        .container{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            gap: 10px;
+            padding: 50px 20px;
+        }
+        h1{
+            font-size: 1rem;
+        }
+    }
 }

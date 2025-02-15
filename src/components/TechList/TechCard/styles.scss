@@ -1,5 +1,28 @@
 .techItem{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    
+    .techNav{
+        display: flex;
+        gap: 10px;
+        p{
+            color: var(--grey1);
+        }
+    }
+       
+    }
+    .techTitle{
+        display: flex;
+        gap: 5px;
+        
+        p{
+            color: var(--grey1);
+        }
+    }
+
+
+@media(max-width:550px ){
+.techTitle{
+    flex-direction: column;
+}
 }

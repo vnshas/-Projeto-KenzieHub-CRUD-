@@ -12,14 +12,14 @@ export interface ILogin{
 
 export const LoginForm = () => {
     
-    const registerSchema = yup.object({
+    const loginSchema = yup.object({
         email: yup.string().email().required("Email obrigatório"),
         password: yup.string().required("Senha Obrigatória")
 
     })
 
     const {register, handleSubmit, formState:{errors}} = useForm<ILogin>({
-        resolver: yupResolver(registerSchema)
+        resolver: yupResolver(loginSchema)
     })
 
     const { userLogin } = useContext(UserContext)

@@ -35,7 +35,7 @@ export const RegisterPage = () => {
     password_confirm: yup
       .string()
       .required("Por favor confirme sua senha.")
-      .oneOf([yup.ref("password"), null], "Senhas nao condizem."),
+      .oneOf([yup.ref("password")], "Senhas nao condizem."),
 
     bio: yup.string().required("Bio obrigatória."),
 
@@ -153,7 +153,7 @@ export const RegisterPage = () => {
               id="course_module"
               {...register("course_module")}
             >
-              <option>Primeiro módulo (Introdução ao Frontend)</option>
+              <option id="1">Primeiro módulo (Introdução ao Frontend)</option>
               <option>Segundo módulo (Frontend Avançado)</option>
               <option>Terceiro módulo (Introdução ao Backend)</option>
               <option>Quarto módulo (Backend Avançado)</option>

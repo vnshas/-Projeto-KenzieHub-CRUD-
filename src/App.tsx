@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <ToastContainer autoClose={1500} limit={1} />
+      <ToastContainer autoClose={1500} limit={3} />
       <RoutesMain />
     </>
   )
