@@ -1,12 +1,11 @@
 import { useContext } from "react"
-import { IUserTechs } from "../../../providers/UserContext"
 import "./styles.scss"
-import { TechContext } from "../../../providers/TechContext"
-import { FaRegTrashAlt } from "react-icons/fa";
-import { MdOutlineModeEdit } from "react-icons/md";
+import { IEditModal, TechContext } from "../../../providers/TechContext"
+import { FaRegTrashAlt } from "react-icons/fa"
+import { MdOutlineModeEdit } from "react-icons/md"
 
 interface ITechCardProps{
-  tech: IUserTechs
+  tech: IEditModal
 }
 
 export const TechCard = ({tech}:ITechCardProps) =>{

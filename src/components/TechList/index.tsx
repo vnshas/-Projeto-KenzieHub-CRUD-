@@ -1,7 +1,7 @@
-import { TechCard } from "./TechCard";
+import { TechCard } from "./TechCard"
 import "./styles.scss"
-import { UserContext } from "../../providers/UserContext";
-import { useContext } from "react";
+import { UserContext } from "../../providers/UserContext"
+import { useContext } from "react"
 
 
 export const TechList = () =>{

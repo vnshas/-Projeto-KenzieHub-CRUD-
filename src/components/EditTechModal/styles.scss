@@ -121,3 +121,27 @@
     top: 0;
     right: 0;
 }
+
+@media(max-width:430px){
+    .modalBox{
+        max-width: 340px;
+        .editForm{ 
+            label{
+                margin-left: 6px;
+            }
+            input{
+                width: 270px;
+                margin-left: 6px;
+            }
+            select{
+                width: 270px;
+                margin-left: 6px;
+               
+            }
+            button{
+                width: 270px;
+                margin-left: 6px;
+            }
+        }
+    }
+}

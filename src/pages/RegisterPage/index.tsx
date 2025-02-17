@@ -1,20 +1,20 @@
-import { useContext, useState } from "react";
-import { useForm } from "react-hook-form";
-import { UserContext } from "../../providers/UserContext";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import "./styles.scss";
-import Logo from "../../assets/Logo.png";
-import { Link } from "react-router-dom";
+import { useContext} from "react"
+import { useForm } from "react-hook-form"
+import { UserContext } from "../../providers/UserContext"
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
+import "./styles.scss"
+import Logo from "../../assets/Logo.png"
+import { Link } from "react-router-dom"
 
 export interface IUserRegister {
-  email: string;
-  password: string;
-  password_confirm: string;
-  name: string;
-  bio: string;
-  contact: string;
-  course_module: string;
+  email: string
+  password: string
+  password_confirm: string
+  name: string
+  bio: string
+  contact: string
+  course_module: string
 }
 
 export const RegisterPage = () => {
@@ -42,7 +42,7 @@ export const RegisterPage = () => {
     contact: yup.string().required("Contato obrigatorio."),
 
     course_module: yup.string().required("Curso obrigatorio."),
-  });
+  })
 
   const {
     register,
@@ -50,12 +50,12 @@ export const RegisterPage = () => {
     formState: { errors },
   } = useForm<IUserRegister>({
     resolver: yupResolver(schema),
-  });
+  })
 
-  const { userRegister } = useContext(UserContext);
+  const { userRegister } = useContext(UserContext)
   const submit = async (formData : IUserRegister) => {
-    userRegister(formData);
-  };
+    userRegister(formData)
+  }
 
   return (
     <main>
@@ -165,5 +165,5 @@ export const RegisterPage = () => {
         </div>
       </div>
     </main>
-  );
-};
+  )
+}

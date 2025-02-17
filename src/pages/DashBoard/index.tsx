@@ -43,7 +43,7 @@ export const DashBoard = () => {
                         </div>
                 </div>
                 {isOpen ? <CreateTechModal /> : null}
-                {editModal ? <EditTechModal/> : null}
+                {editModal.title ? <EditTechModal/> : null}
             </section>
         </main>
     )

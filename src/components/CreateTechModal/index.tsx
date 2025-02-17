@@ -37,7 +37,7 @@ export const CreateTechModal = () =>{
                         <button className="closeModalButton" onClick={() => setIsOpen(false)}>X</button>
                     </div>
                 </div>
-                <form onSubmit={handleSubmit(submit)}>
+                <form className="createForm" onSubmit={handleSubmit(submit)}>
                     <label className="headline" htmlFor="title">Nome</label>
                     <input className="title2 light" id="title" type="text" placeholder="Digite sua tecnologia" {...register("title")} />
                     <p>{errors.title?.message}</p>

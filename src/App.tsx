@@ -1,7 +1,7 @@
-import { RoutesMain } from "./routes";
+import { RoutesMain } from "./routes"
 import "./styles/index.scss"
 
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer,} from 'react-toastify'
 
 function App() {
   

@@ -23,5 +23,5 @@ export const RoutesMain = () =>{
           </TechProvider>
         </UserProvider>
       </>
-    );
+    )
 }
